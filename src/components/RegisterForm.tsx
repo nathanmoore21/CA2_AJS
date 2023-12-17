@@ -6,7 +6,7 @@ import { useSession } from "../contexts/AuthContext"; // Importing useSession ho
 import { RegisterFormType } from "../types"; // Importing RegisterFormType type
 
 // RegisterForm component
-export default function RegisterForm({ switchForm }) {
+export default function RegisterForm({ switchForm }: { switchForm: () => void }) {
   // RegisterForm component
   const { signIn } = useSession(); // Get the signIn function from the AuthContext
 
