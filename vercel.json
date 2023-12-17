@@ -1,9 +1,14 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "src/app/*", "use": "@vercel/node" }
-    ],
-    "routes": [{ "src": "/(.*)", "dest": "/src/app/$1" }],
-    "cleanUrls": true
+    "buildCommand": "expo export -p web",
+    "outputDirectory": "dist",
+    "devCommand": "expo",
+    "cleanUrls": true,
+    "framework": null,
+    "rewrites": [
+      {
+        "source": "/:path*",
+        "destination": "/"
+      }
+    ]
   }
   
